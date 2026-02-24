@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermionics SEO Recovery Analysis | SEO Bandwagon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-tertiary: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #606070;
+            --accent-red: #ff4444;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f97316;
+            --accent-cyan: #06b6d4;
+            --border-color: #2a2a3a;
+            --gradient-red: linear-gradient(135deg, #ff4444 0%, #cc2222 100%);
+            --gradient-green: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-cta {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(255, 68, 68, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Animated Counter */
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .counter-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 3rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .counter-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .counter-box.before {
+            border-color: var(--accent-green);
+        }
+
+        .counter-box.after {
+            border-color: var(--accent-red);
+        }
+
+        .counter-box .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .counter-box .number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .counter-box.before .number {
+            color: var(--accent-green);
+        }
+
+        .counter-box.after .number {
+            color: var(--accent-red);
+        }
+
+        .counter-arrow {
+            font-size: 3rem;
+            color: var(--text-muted);
+            animation: arrowPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes arrowPulse {
+            0%, 100% { transform: translateX(0); opacity: 0.5; }
+            50% { transform: translateX(10px); opacity: 1; }
+        }
+
+        .counter-subtext {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-red);
+            margin-top: 0.5rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .problem-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-red);
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-red);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 68, 68, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .problem-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .problem-stat {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-top: 1rem;
+        }
+
+        /* Competitor Chart */
+        .chart-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 4rem;
+        }
+
+        .chart-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .chart-bar-wrapper {
+            margin-bottom: 1.25rem;
+        }
+
+        .chart-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .chart-label .name {
+            font-weight: 500;
+        }
+
+        .chart-label .value {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-secondary);
+        }
+
+        .chart-bar-bg {
+            height: 40px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-bar {
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: white;
+            min-width: fit-content;
+            transition: width 1.5s ease-out;
+        }
+
+        .chart-bar.competitor {
+            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+        }
+
+        .chart-bar.thermionics {
+            background: var(--gradient-red);
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+        }
+
+        .legend-dot.competitor {
+            background: var(--accent-blue);
+        }
+
+        .legend-dot.thermionics {
+            background: var(--accent-red);
+        }
+
+        /* Backlinks Section */
+        .backlinks-section {
+            position: relative;
+        }
+
+        .backlinks-visual {
+            display: grid;
+            grid-template-columns: 1fr 100px 1fr;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .backlinks-visual {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .backlinks-stat-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .backlinks-stat-box h3 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .backlinks-stat-box.total h3 {
+            color: var(--accent-blue);
+        }
+
+        .backlinks-stat-box.broken h3 {
+            color: var(--accent-red);
+        }
+
+        .backlinks-stat-box p {
+            color: var(--text-secondary);
+        }
+
+        .backlinks-arrow {
+            font-size: 2rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .backlinks-impact {
+            background: rgba(255, 68, 68, 0.05);
+            border: 1px solid rgba(255, 68, 68, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .backlinks-impact h4 {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .backlinks-impact ul {
+            list-style: none;
+        }
+
+        .backlinks-impact li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .backlinks-impact li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+        }
+
+        /* Donut Chart for Backlinks */
+        .donut-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .donut-chart {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+
+        .donut-chart svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .donut-chart circle {
+            fill: none;
+            stroke-width: 30;
+        }
+
+        .donut-bg {
+            stroke: var(--bg-tertiary);
+        }
+
+        .donut-working {
+            stroke: var(--accent-green);
+            stroke-dasharray: 0 440;
+            animation: donutWorking 2s ease-out 0.5s forwards;
+        }
+
+        .donut-broken {
+            stroke: var(--accent-red);
+            stroke-dasharray: 0 440;
+            animation: donutBroken 2s ease-out 0.5s forwards;
+        }
+
+        @keyframes donutWorking {
+            to { stroke-dasharray: 308 440; } /* 70% */
+        }
+
+        @keyframes donutBroken {
+            to { stroke-dasharray: 132 440; } /* 30% */
+        }
+
+        .donut-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .donut-center .number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .donut-center .label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .solution-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-green);
+        }
+
+        .solution-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .solution-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Opportunity Section */
+        .opportunity-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 24px;
+            padding: 4rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .opportunity-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-label {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .opportunity-sublabel {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 8rem 2rem;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button.primary {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .cta-button.secondary {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .cta-button.primary:hover {
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button.secondary:hover {
+            border-color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            .counter-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .counter-arrow {
+                transform: rotate(90deg);
+            }
+
+            @keyframes arrowPulse {
+                0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.5; }
+                50% { transform: rotate(90deg) translateX(10px); opacity: 1; }
+            }
+
+            .counter-box {
+                padding: 1.5rem 2rem;
+            }
+
+            .counter-box .number {
+                font-size: 2.5rem;
+            }
+
+            .chart-section {
+                padding: 1.5rem;
+            }
+
+            .opportunity-box {
+                padding: 2rem;
+            }
+
+            .opportunity-number {
+                font-size: 3.5rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <a href="https://seobandwagon.com" class="logo">[<span>SEO</span>]Bandwagon</a>
+            <a href="https://calendar.app.google/homc9bi1hfMvHMEf6" class="nav-cta" target="_blank">Schedule a Call →</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                SEO Recovery Analysis
+            </div>
+            <h1>
+                Your Website Lost<br>
+                <span class="highlight">2,644 Pages</span>
+            </h1>
+            <p class="hero-subtitle">
+                Thermionics went from a comprehensive 2,645-page website to essentially a single page — 
+                and your competitors are capturing your traffic.
+            </p>
+
+            <div class="counter-container">
+                <div class="counter-box before">
+                    <div class="label">Before Rebuild</div>
+                    <div class="number" id="counter-before">0</div>
+                    <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Indexed Pages</div>
+                </div>
+                <div class="counter-arrow">→</div>
+                <div class="counter-box after">
+                    <div class="label">After Rebuild</div>
+                    <div class="number" id="counter-after">0</div>
+                    <div class="counter-subtext">−99.96% content</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>See the evidence</span>
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="animate-on-scroll">
+        <div class="section-header">
+            <span class="section-tag">// The Problem</span>
+            <h2 class="section-title">What Went Wrong</h2>
+            <p class="section-subtitle">
+                When your website was rebuilt, critical SEO elements were lost
+            </p>
+        </div>
+
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="problem-icon">📉</div>
+                <h3>Massive Content Loss</h3>
+                <p>2,644 product pages, technical specs, application guides, and career listings — all gone. Each page was a potential entry point for customers searching for vacuum equipment.</p>
+                <span class="problem-stat">−99.96%</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🔗</div>
+                <h3>Broken Backlinks</h3>
+                <p>899 external websites link to Thermionics. Approximately 30% now point to 404 error pages, wasting valuable link equity you've built over decades.</p>
+                <span class="problem-stat">~270 broken</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🏁</div>
+                <h3>Competitor Advantage</h3>
+                <p>Your competitors average 19,000+ monthly organic visits while Thermionics receives just 199. They're capturing search traffic that should be yours.</p>
+                <span class="problem-stat">95× gap</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor Chart -->
+    <section class="animate-on-scroll">
+        <div class="section-header">
+            <span class="section-tag">// Market Position</span>
+            <h2 class="section-title">Traffic Comparison</h2>
+            <p class="section-subtitle">
+                Monthly organic search visits across the vacuum equipment industry
+            </p>
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <div class="chart-bar-wrapper">
+                    <div class="chart-label">
+                        <span class="name">Edwards Vacuum</span>
+                        <span class="value">4,085 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar competitor" data-width="100" style="width: 0%">30,575</div>
+                    </div>
+                </div>
+                <div class="chart-bar-wrapper">
+                    <div class="chart-label">
+                        <span class="name">Lesker</span>
+                        <span class="value">4,415 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar competitor" data-width="77" style="width: 0%">23,506</div>
+                    </div>
+                </div>
+                <div class="chart-bar-wrapper">
+                    <div class="chart-label">
+                        <span class="name">Pfeiffer Vacuum</span>
+                        <span class="value">8,672 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar competitor" data-width="52" style="width: 0%">15,975</div>
+                    </div>
+                </div>
+                <div class="chart-bar-wrapper">
+                    <div class="chart-label">
+                        <span class="name">Leybold</span>
+                        <span class="value">2,711 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar competitor" data-width="46" style="width: 0%">14,052</div>
+                    </div>
+                </div>
+                <div class="chart-bar-wrapper">
+                    <div class="chart-label">
+                        <span class="name">Ideal Vacuum</span>
+                        <span class="value">5,532 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar competitor" data-width="42" style="width: 0%">12,690</div>
+                    </div>
+                </div>
+                <div class="chart-bar-wrapper" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px dashed var(--border-color);">
+                    <div class="chart-label">
+                        <span class="name" style="color: var(--accent-red);">⚠️ Thermionics</span>
+                        <span class="value">163 keywords</span>
+                    </div>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar thermionics" data-width="0.65" style="width: 0%; min-width: 60px;">199</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <span class="legend-dot competitor"></span>
+                    <span>Competitors</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot thermionics"></span>
+                    <span>Thermionics (current)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backlinks Section -->
+    <section class="backlinks-section animate-on-scroll">
+        <div class="section-header">
+            <span class="section-tag">// Link Equity</span>
+            <h2 class="section-title">Broken Backlink Impact</h2>
+            <p class="section-subtitle">
+                External websites linking to pages that no longer exist
+            </p>
+        </div>
+
+        <div class="donut-container">
+            <div class="donut-chart">
+                <svg viewBox="0 0 160 160">
+                    <circle class="donut-bg" cx="80" cy="80" r="70"/>
+                    <circle class="donut-working" cx="80" cy="80" r="70"/>
+                    <circle class="donut-broken" cx="80" cy="80" r="70" stroke-dashoffset="-308"/>
+                </svg>
+                <div class="donut-center">
+                    <div class="number" style="color: var(--accent-blue);">899</div>
+                    <div class="label">Total Backlinks</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="backlinks-visual">
+            <div class="backlinks-stat-box total">
+                <h3>~630</h3>
+                <p>Working Links (70%)</p>
+            </div>
+            <div class="backlinks-arrow">→</div>
+            <div class="backlinks-stat-box broken">
+                <h3>~270</h3>
+                <p>Broken Links (30%)</p>
+            </div>
+        </div>
+
+        <div class="backlinks-impact">
+            <h4>Impact of Broken Backlinks</h4>
+            <ul>
+                <li>Search engines discover broken links and reduce trust signals</li>
+                <li>Referral traffic from other websites hits dead ends</li>
+                <li>Link equity accumulated over 50+ years is being wasted</li>
+                <li>Competitors benefit as your domain authority declines</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="animate-on-scroll">
+        <div class="section-header">
+            <span class="section-tag">// The Solution</span>
+            <h2 class="section-title">Recovery Strategy</h2>
+            <p class="section-subtitle">
+                A systematic approach to reclaim your search visibility
+            </p>
+        </div>
+
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-number">01</div>
+                <h3>Restore Lost Pages</h3>
+                <p>We've archived all 2,645 URLs from the Wayback Machine. We'll systematically rebuild product pages, specifications, and application guides — recapturing 50+ years of valuable content.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">02</div>
+                <h3>Fix Broken Backlinks</h3>
+                <p>Implement 301 redirects for all 899 backlinks, pointing them to relevant live pages. This immediately recovers lost link equity and stops the authority bleeding.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">03</div>
+                <h3>Technical SEO Audit</h3>
+                <p>Comprehensive technical review: site speed, mobile optimization, schema markup, XML sitemaps, and crawlability. Fix the foundation so new content can rank.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">04</div>
+                <h3>Keyword Gap Analysis</h3>
+                <p>Identify exactly which keywords your competitors rank for that you don't. Target high-intent terms like "UHV systems," "e-beam evaporators," and "vacuum feedthroughs."</p>
+            </div>
+        </div>
+
+        <div class="opportunity-box">
+            <div class="opportunity-number">95×</div>
+            <div class="opportunity-label">Potential Traffic Increase</div>
+            <div class="opportunity-sublabel">Based on competitor benchmarks and your historical content</div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Recover Your Search Visibility?</h2>
+            <p>
+                Let's discuss how we can help Thermionics reclaim its position 
+                as a search-visible leader in vacuum technology.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://calendar.app.google/homc9bi1hfMvHMEf6" class="cta-button primary" target="_blank">
+                    Schedule a Strategy Call
+                    <span>→</span>
+                </a>
+                <a href="mailto:kyle@seobandwagon.com?subject=Thermionics%20SEO%20Recovery" class="cta-button secondary">
+                    Email Kyle
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Prepared by <a href="https://seobandwagon.com">SEO Bandwagon</a> • February 2026</p>
+    </footer>
+
+    <script>
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function (ease-out)
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(start + (target - start) * easeOut);
+                
+                element.textContent = current.toLocaleString();
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+
+        // Start counters when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                animateCounter(document.getElementById('counter-before'), 2645, 2500);
+            }, 500);
+            
+            setTimeout(() => {
+                animateCounter(document.getElementById('counter-after'), 1, 1500);
+            }, 1500);
+        });
+
+        // Chart bar animation
+        function animateChartBars() {
+            const bars = document.querySelectorAll('.chart-bar');
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                }, index * 150);
+            });
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Trigger chart animation when chart section becomes visible
+                    if (entry.target.querySelector('.chart-container')) {
+                        setTimeout(animateChartBars, 300);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
