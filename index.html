@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThermionicsNW Market Opportunity | SEO Bandwagon</title>
+    <title>Thermionics SEO Strategy | SEO Bandwagon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -46,19 +46,10 @@
         }
 
         /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--border-color);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--text-muted);
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
         /* Navigation */
         nav {
@@ -89,9 +80,7 @@
             text-decoration: none;
         }
 
-        .logo span {
-            color: var(--accent-blue);
-        }
+        .logo span { color: var(--accent-blue); }
 
         .nav-cta {
             background: var(--gradient-blue);
@@ -124,10 +113,7 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: 
                 radial-gradient(ellipse at 20% 20%, rgba(255, 68, 68, 0.08) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
@@ -179,14 +165,146 @@
             background-clip: text;
         }
 
+        .hero h1 .highlight-blue {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            max-width: 680px;
+            margin: 0 auto 2rem;
         }
 
-        /* Animated Counter */
+        /* Entity callout note */
+        .entity-callout {
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.25rem 1.75rem;
+            text-align: left;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .entity-callout strong {
+            color: var(--accent-blue);
+        }
+
+        /* Two-domain summary cards */
+        .domain-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        @media (max-width: 640px) {
+            .domain-summary { grid-template-columns: 1fr; }
+        }
+
+        .domain-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+        }
+
+        .domain-card.recovery { border-color: rgba(255, 68, 68, 0.4); }
+        .domain-card.launch   { border-color: rgba(34, 197, 94, 0.4); }
+
+        .domain-card .domain-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-card.recovery .domain-tag { color: var(--accent-red); }
+        .domain-card.launch   .domain-tag { color: var(--accent-green); }
+
+        .domain-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .domain-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Part dividers */
+        .part-divider {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 0;
+        }
+
+        .part-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-top: 2px solid var(--border-color);
+            padding-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .part-header.recovery { border-color: var(--accent-red); }
+        .part-header.launch   { border-color: var(--accent-green); }
+        .part-header.combined { border-color: var(--accent-blue); }
+
+        .part-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            white-space: nowrap;
+        }
+
+        .part-header.recovery .part-number { color: var(--accent-red); }
+        .part-header.launch   .part-number { color: var(--accent-green); }
+        .part-header.combined .part-number { color: var(--accent-blue); }
+
+        .part-title-text {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 700;
+        }
+
+        .part-domain {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .part-header.recovery .part-domain {
+            background: rgba(255, 68, 68, 0.1);
+            color: var(--accent-red);
+            border: 1px solid rgba(255, 68, 68, 0.3);
+        }
+
+        .part-header.launch .part-domain {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--accent-green);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .part-header.combined .part-domain {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Counter, sections, problem cards - keeping all original styles */
         .counter-container {
             display: flex;
             justify-content: center;
@@ -205,17 +323,9 @@
             transition: transform 0.3s, border-color 0.3s;
         }
 
-        .counter-box:hover {
-            transform: translateY(-5px);
-        }
-
-        .counter-box.before {
-            border-color: var(--accent-green);
-        }
-
-        .counter-box.after {
-            border-color: var(--accent-red);
-        }
+        .counter-box:hover { transform: translateY(-5px); }
+        .counter-box.before { border-color: var(--accent-green); }
+        .counter-box.after  { border-color: var(--accent-red); }
 
         .counter-box .label {
             font-size: 0.8rem;
@@ -232,13 +342,8 @@
             line-height: 1;
         }
 
-        .counter-box.before .number {
-            color: var(--accent-green);
-        }
-
-        .counter-box.after .number {
-            color: var(--accent-red);
-        }
+        .counter-box.before .number { color: var(--accent-green); }
+        .counter-box.after  .number { color: var(--accent-red); }
 
         .counter-arrow {
             font-size: 3rem;
@@ -277,7 +382,6 @@
             50% { transform: translateX(-50%) translateY(10px); }
         }
 
-        /* Sections */
         section {
             padding: 6rem 2rem;
             max-width: 1200px;
@@ -312,7 +416,6 @@
             margin: 0 auto;
         }
 
-        /* Problem Section */
         .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -337,9 +440,7 @@
         .problem-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 3px;
             background: var(--gradient-red);
         }
@@ -356,15 +457,8 @@
             margin-bottom: 1.5rem;
         }
 
-        .problem-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .problem-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
+        .problem-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .problem-card p  { color: var(--text-secondary); font-size: 0.95rem; }
 
         .problem-stat {
             display: inline-block;
@@ -375,7 +469,6 @@
             margin-top: 1rem;
         }
 
-        /* Competitor Chart */
         .chart-section {
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -384,14 +477,8 @@
             margin-top: 4rem;
         }
 
-        .chart-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .chart-bar-wrapper {
-            margin-bottom: 1.25rem;
-        }
+        .chart-container { max-width: 800px; margin: 0 auto; }
+        .chart-bar-wrapper { margin-bottom: 1.25rem; }
 
         .chart-label {
             display: flex;
@@ -400,14 +487,8 @@
             font-size: 0.9rem;
         }
 
-        .chart-label .name {
-            font-weight: 500;
-        }
-
-        .chart-label .value {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--text-secondary);
-        }
+        .chart-label .name  { font-weight: 500; }
+        .chart-label .value { font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); }
 
         .chart-bar-bg {
             height: 40px;
@@ -432,13 +513,8 @@
             transition: width 1.5s ease-out;
         }
 
-        .chart-bar.competitor {
-            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-cyan) 100%);
-        }
-
-        .chart-bar.thermionics {
-            background: var(--gradient-red);
-        }
+        .chart-bar.competitor  { background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-cyan) 100%); }
+        .chart-bar.thermionics { background: var(--gradient-red); }
 
         .chart-legend {
             display: flex;
@@ -456,24 +532,11 @@
             color: var(--text-secondary);
         }
 
-        .legend-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 4px;
-        }
+        .legend-dot { width: 12px; height: 12px; border-radius: 4px; }
+        .legend-dot.competitor  { background: var(--accent-blue); }
+        .legend-dot.thermionics { background: var(--accent-red); }
 
-        .legend-dot.competitor {
-            background: var(--accent-blue);
-        }
-
-        .legend-dot.thermionics {
-            background: var(--accent-red);
-        }
-
-        /* Backlinks Section */
-        .backlinks-section {
-            position: relative;
-        }
+        .backlinks-section { position: relative; }
 
         .backlinks-visual {
             display: grid;
@@ -484,10 +547,7 @@
         }
 
         @media (max-width: 768px) {
-            .backlinks-visual {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+            .backlinks-visual { grid-template-columns: 1fr; text-align: center; }
         }
 
         .backlinks-stat-box {
@@ -505,23 +565,11 @@
             margin-bottom: 0.5rem;
         }
 
-        .backlinks-stat-box.total h3 {
-            color: var(--accent-blue);
-        }
+        .backlinks-stat-box.total  h3 { color: var(--accent-blue); }
+        .backlinks-stat-box.broken h3 { color: var(--accent-red); }
+        .backlinks-stat-box p { color: var(--text-secondary); }
 
-        .backlinks-stat-box.broken h3 {
-            color: var(--accent-red);
-        }
-
-        .backlinks-stat-box p {
-            color: var(--text-secondary);
-        }
-
-        .backlinks-arrow {
-            font-size: 2rem;
-            color: var(--text-muted);
-            text-align: center;
-        }
+        .backlinks-arrow { font-size: 2rem; color: var(--text-muted); text-align: center; }
 
         .backlinks-impact {
             background: rgba(255, 68, 68, 0.05);
@@ -531,15 +579,8 @@
             margin-top: 3rem;
         }
 
-        .backlinks-impact h4 {
-            color: var(--accent-red);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .backlinks-impact ul {
-            list-style: none;
-        }
+        .backlinks-impact h4 { color: var(--accent-red); font-size: 1.1rem; margin-bottom: 1rem; }
+        .backlinks-impact ul  { list-style: none; }
 
         .backlinks-impact li {
             padding: 0.5rem 0;
@@ -548,14 +589,8 @@
             color: var(--text-secondary);
         }
 
-        .backlinks-impact li::before {
-            content: '✕';
-            position: absolute;
-            left: 0;
-            color: var(--accent-red);
-        }
+        .backlinks-impact li::before { content: '✕'; position: absolute; left: 0; color: var(--accent-red); }
 
-        /* Donut Chart for Backlinks */
         .donut-container {
             display: flex;
             justify-content: center;
@@ -563,67 +598,26 @@
             margin: 3rem 0;
         }
 
-        .donut-chart {
-            position: relative;
-            width: 250px;
-            height: 250px;
-        }
+        .donut-chart { position: relative; width: 250px; height: 250px; }
+        .donut-chart svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .donut-chart circle { fill: none; stroke-width: 30; }
+        .donut-bg      { stroke: var(--bg-tertiary); }
+        .donut-working { stroke: var(--accent-green); stroke-dasharray: 0 440; animation: donutWorking 2s ease-out 0.5s forwards; }
+        .donut-broken  { stroke: var(--accent-red);   stroke-dasharray: 0 440; animation: donutBroken  2s ease-out 0.5s forwards; }
 
-        .donut-chart svg {
-            width: 100%;
-            height: 100%;
-            transform: rotate(-90deg);
-        }
-
-        .donut-chart circle {
-            fill: none;
-            stroke-width: 30;
-        }
-
-        .donut-bg {
-            stroke: var(--bg-tertiary);
-        }
-
-        .donut-working {
-            stroke: var(--accent-green);
-            stroke-dasharray: 0 440;
-            animation: donutWorking 2s ease-out 0.5s forwards;
-        }
-
-        .donut-broken {
-            stroke: var(--accent-red);
-            stroke-dasharray: 0 440;
-            animation: donutBroken 2s ease-out 0.5s forwards;
-        }
-
-        @keyframes donutWorking {
-            to { stroke-dasharray: 308 440; } /* 70% */
-        }
-
-        @keyframes donutBroken {
-            to { stroke-dasharray: 132 440; } /* 30% */
-        }
+        @keyframes donutWorking { to { stroke-dasharray: 308 440; } }
+        @keyframes donutBroken  { to { stroke-dasharray: 132 440; } }
 
         .donut-center {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
 
-        .donut-center .number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
+        .donut-center .number { font-family: 'JetBrains Mono', monospace; font-size: 2.5rem; font-weight: 700; }
+        .donut-center .label  { color: var(--text-secondary); font-size: 0.9rem; }
 
-        .donut-center .label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Solution Section */
         .solution-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -648,9 +642,7 @@
         .solution-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 3px;
             background: var(--gradient-green);
         }
@@ -665,17 +657,9 @@
             margin-bottom: 1rem;
         }
 
-        .solution-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-        }
+        .solution-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .solution-card p  { color: var(--text-secondary); font-size: 0.95rem; }
 
-        .solution-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* Opportunity Section */
         .opportunity-box {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
             border: 1px solid rgba(34, 197, 94, 0.3);
@@ -697,18 +681,210 @@
             margin-bottom: 1rem;
         }
 
-        .opportunity-label {
-            font-size: 1.5rem;
+        .opportunity-label    { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 1rem; }
+        .opportunity-sublabel { color: var(--text-secondary); font-size: 1.1rem; }
+
+        .opp-callout {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: rgba(34,197,94,0.07);
+            border: 1px solid rgba(34,197,94,0.25);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .opp-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+        .kw-table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .kw-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.93rem;
+        }
+
+        .kw-table th {
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .kw-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid rgba(42,42,58,0.5);
+            color: var(--text-secondary);
+        }
+
+        .kw-table tr:last-child td { border-bottom: none; }
+
+        .kw-table td:first-child {
             color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .kw-table td:nth-child(2) {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-cyan);
+        }
+
+        .kw-highlight td { background: rgba(34,197,94,0.05); }
+
+        .comp-badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .comp-badge.high { background: rgba(255,68,68,0.15);  color: var(--accent-red);   }
+        .comp-badge.med  { background: rgba(249,115,22,0.15); color: var(--accent-orange); }
+        .comp-badge.low  { background: rgba(34,197,94,0.15);  color: var(--accent-green);  }
+
+        .opp-score { color: var(--accent-orange); }
+
+        .traffic-projection {
+            display: flex;
+            align-items: stretch;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .traffic-projection { flex-direction: column; }
+            .proj-arrow { transform: rotate(90deg); text-align: center; }
+        }
+
+        .proj-card {
+            flex: 1;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.75rem;
+        }
+
+        .proj-card-mid  { border-color: rgba(34,197,94,0.3); }
+        .proj-card-peak { border-color: var(--accent-green); box-shadow: 0 0 30px rgba(34,197,94,0.1); }
+
+        .proj-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .proj-visits {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .proj-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
             margin-bottom: 1rem;
         }
 
-        .opportunity-sublabel {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
+        .proj-detail { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+
+        .proj-leads {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            background: rgba(6,182,212,0.08);
+            border: 1px solid rgba(6,182,212,0.2);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            display: inline-block;
         }
 
-        /* CTA Section */
+        .proj-arrow {
+            display: flex;
+            align-items: center;
+            font-size: 1.75rem;
+            color: var(--text-muted);
+            padding: 0 0.25rem;
+        }
+
+        .opp-note {
+            margin-top: 2rem;
+            background: rgba(165,8,34,0.08);
+            border: 1px solid rgba(165,8,34,0.3);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.93rem;
+            color: var(--text-secondary);
+        }
+
+        .combined-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .combined-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .combined-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .combined-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gradient-blue);
+        }
+
+        .combined-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .combined-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .combined-card p  { color: var(--text-secondary); font-size: 0.92rem; }
+
+        .combined-summary {
+            background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.08) 100%);
+            border: 1px solid rgba(59,130,246,0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .combined-summary h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .combined-summary p { color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+
         .cta-section {
             text-align: center;
             padding: 8rem 2rem;
@@ -718,39 +894,17 @@
         .cta-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
-        .cta-content {
-            position: relative;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+        .cta-content { position: relative; max-width: 700px; margin: 0 auto; }
 
-        .cta-section h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
+        .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1.5rem; }
+        .cta-section p  { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; }
 
-        .cta-section p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
         .cta-button {
             display: inline-flex;
@@ -764,30 +918,13 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .cta-button.primary {
-            background: var(--gradient-blue);
-            color: white;
-        }
+        .cta-button.primary   { background: var(--gradient-blue); color: white; }
+        .cta-button.secondary { background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-primary); }
 
-        .cta-button.secondary {
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-        }
+        .cta-button:hover { transform: translateY(-3px); }
+        .cta-button.primary:hover   { box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4); }
+        .cta-button.secondary:hover { border-color: var(--accent-blue); }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-
-        .cta-button.primary:hover {
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
-        }
-
-        .cta-button.secondary:hover {
-            border-color: var(--accent-blue);
-        }
-
-        /* Footer */
         footer {
             border-top: 1px solid var(--border-color);
             padding: 2rem;
@@ -796,12 +933,8 @@
             font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
+        footer a { color: var(--accent-blue); text-decoration: none; }
 
-        /* Animations */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -813,50 +946,24 @@
             transform: translateY(0);
         }
 
-        /* Mobile */
         @media (max-width: 640px) {
-            .counter-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .counter-arrow {
-                transform: rotate(90deg);
-            }
-
+            .counter-container { flex-direction: column; gap: 1rem; }
+            .counter-arrow { transform: rotate(90deg); }
             @keyframes arrowPulse {
                 0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.5; }
                 50% { transform: rotate(90deg) translateX(10px); opacity: 1; }
             }
-
-            .counter-box {
-                padding: 1.5rem 2rem;
-            }
-
-            .counter-box .number {
-                font-size: 2.5rem;
-            }
-
-            .chart-section {
-                padding: 1.5rem;
-            }
-
-            .opportunity-box {
-                padding: 2rem;
-            }
-
-            .opportunity-number {
-                font-size: 3.5rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
+            .counter-box { padding: 1.5rem 2rem; }
+            .counter-box .number { font-size: 2.5rem; }
+            .chart-section { padding: 1.5rem; }
+            .opportunity-box { padding: 2rem; }
+            .opportunity-number { font-size: 3.5rem; }
+            section { padding: 4rem 1.5rem; }
+            .part-header { flex-wrap: wrap; gap: 0.75rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-content">
             <a href="https://seobandwagon.com" class="logo">[<span>SEO</span>]Bandwagon</a>
@@ -864,81 +971,105 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="dot"></span>
-                Market Opportunity Analysis
+                SEO Strategy Proposal
             </div>
             <h1>
-                ThermionicsNW<br>
-                <span class="highlight">$45K+ Monthly Opportunity</span>
+                A <span class="highlight">Two-Part</span> SEO Strategy<br>
+                for <span class="highlight-blue">Thermionics</span>
             </h1>
             <p class="hero-subtitle">
-                ThermionicsNW.com is a fresh start. Your competitors average 19,000+ monthly organic visits — 
-                here's how to capture your share of the UHV equipment market.
+                Two domains. Two distinct challenges. One coordinated strategy to reclaim lost ground and build new search presence in the UHV market.
             </p>
 
-            <div class="counter-container">
-                <div class="counter-box before">
-                    <div class="label">Competitor Avg</div>
-                    <div class="number" id="counter-before">0</div>
-                    <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Monthly Visits</div>
+            <div class="entity-callout">
+                <strong>📌 Note:</strong> <strong>thermionics.com</strong> and <strong>thermionicsnw.com</strong> are <em>separate entities</em>. This proposal covers a coordinated SEO strategy for both — each with its own objectives and approach.
+            </div>
+
+            <div class="domain-summary">
+                <div class="domain-card recovery">
+                    <div class="domain-tag">Part 1 — Recovery</div>
+                    <h3>thermionics.com</h3>
+                    <p>Thermionics Laboratory Inc. — in business since 1958. A website rebuild wiped out 2,644 pages and collapsed traffic to 199 visits/mo. We fix what's broken.</p>
                 </div>
-                <div class="counter-arrow">→</div>
-                <div class="counter-box after" style="border-color: var(--accent-green);">
-                    <div class="label">Your Opportunity</div>
-                    <div class="number" id="counter-after" style="color: var(--accent-green);">0</div>
-                    <div class="counter-subtext" style="color: var(--accent-green);">searches/mo</div>
+                <div class="domain-card launch">
+                    <div class="domain-tag">Part 2 — New Launch</div>
+                    <h3>thermionicsnw.com</h3>
+                    <p>Thermionics Northwest — a brand-new entity with zero traffic history. We build search presence from scratch targeting underserved UHV keywords.</p>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>See the evidence</span>
+            <span>See the full analysis</span>
             <span>↓</span>
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <div class="part-divider">
+        <div class="part-header recovery">
+            <span class="part-number">Part 1</span>
+            <span class="part-title-text">Traffic Recovery</span>
+            <span class="part-domain">thermionics.com</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem;">
+            Thermionics Laboratory Inc. has been in business since 1958. A recent website rebuild wiped out decades of accumulated SEO value. Here's what happened — and how we fix it.
+        </p>
+    </div>
+
     <section class="animate-on-scroll">
         <div class="section-header">
-            <span class="section-tag">// The Market</span>
-            <h2 class="section-title">The Competitive Landscape</h2>
+            <span class="section-tag">// The Problem</span>
+            <h2 class="section-title">What Went Wrong on thermionics.com</h2>
             <p class="section-subtitle">
-                Your competitors dominate organic search — here's the gap ThermionicsNW can fill
+                When thermionics.com was rebuilt, critical SEO elements were lost
             </p>
         </div>
 
+        <div class="counter-container">
+            <div class="counter-box before">
+                <div class="label">Before Rebuild</div>
+                <div class="number" id="counter-before">0</div>
+                <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">Indexed Pages</div>
+            </div>
+            <div class="counter-arrow">→</div>
+            <div class="counter-box after">
+                <div class="label">After Rebuild</div>
+                <div class="number" id="counter-after">0</div>
+                <div class="counter-subtext">−99.96% content</div>
+            </div>
+        </div>
+
         <div class="problem-grid">
-            <div class="problem-card" style="border-color: var(--accent-blue);">
-                <div class="problem-icon">🎯</div>
-                <h3>Untapped Keywords</h3>
-                <p>8,500+ monthly searches for UHV products like feedthroughs, ion pumps, and leak detectors. ThermionicsNW can rank for these terms with proper content strategy.</p>
-                <span class="problem-stat" style="color: var(--accent-blue);">8,500+/mo</span>
+            <div class="problem-card">
+                <div class="problem-icon">📉</div>
+                <h3>Massive Content Loss</h3>
+                <p>2,644 product pages, technical specs, application guides, and career listings — all gone. Each page was a potential entry point for customers searching for vacuum equipment.</p>
+                <span class="problem-stat">−99.96%</span>
             </div>
-            <div class="problem-card" style="border-color: var(--accent-blue);">
-                <div class="problem-icon">💰</div>
-                <h3>High-Value Buyers</h3>
-                <p>Keywords like "feedthroughs" have CPC of $31.27 — that's what competitors pay for a single click. Organic rankings mean free traffic from serious buyers.</p>
-                <span class="problem-stat" style="color: var(--accent-green);">$31/click</span>
+            <div class="problem-card">
+                <div class="problem-icon">🔗</div>
+                <h3>Broken Backlinks</h3>
+                <p>899 external websites link to thermionics.com. Approximately 30% now point to 404 error pages, wasting valuable link equity built over decades.</p>
+                <span class="problem-stat">~270 broken</span>
             </div>
-            <div class="problem-card" style="border-color: var(--accent-blue);">
+            <div class="problem-card">
                 <div class="problem-icon">🏁</div>
-                <h3>Fresh Start Advantage</h3>
-                <p>ThermionicsNW.com is a clean slate — no legacy issues, no technical debt. Build it right from day one with proper SEO architecture.</p>
-                <span class="problem-stat" style="color: var(--accent-purple);">New Domain</span>
+                <h3>Competitor Advantage</h3>
+                <p>Competitors average 19,000+ monthly organic visits while thermionics.com receives just 199 visits/mo. They're capturing search traffic that should be yours.</p>
+                <span class="problem-stat">95× gap</span>
             </div>
         </div>
     </section>
 
-    <!-- Competitor Chart -->
     <section class="animate-on-scroll">
         <div class="section-header">
             <span class="section-tag">// Market Position</span>
             <h2 class="section-title">Traffic Comparison</h2>
             <p class="section-subtitle">
-                Monthly organic search visits across the vacuum equipment industry
+                Monthly organic search visits across the vacuum equipment industry — thermionics.com vs. competitors
             </p>
         </div>
 
@@ -991,7 +1122,7 @@
                 </div>
                 <div class="chart-bar-wrapper" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px dashed var(--border-color);">
                     <div class="chart-label">
-                        <span class="name" style="color: var(--accent-red);">⚠️ Thermionics</span>
+                        <span class="name" style="color: var(--accent-red);">⚠️ thermionics.com (current)</span>
                         <span class="value">163 keywords</span>
                     </div>
                     <div class="chart-bar-bg">
@@ -1006,29 +1137,121 @@
                 </div>
                 <div class="legend-item">
                     <span class="legend-dot thermionics"></span>
-                    <span>Thermionics (current)</span>
+                    <span>thermionics.com (current)</span>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- thermionicsnw Keyword Opportunity Section -->
-    <section class="animate-on-scroll" id="nw-opportunity">
+    <section class="backlinks-section animate-on-scroll">
         <div class="section-header">
-            <span class="section-tag">// The Opportunity for Thermionics Northwest</span>
-            <h2 class="section-title">thermionicsnw.com Can Capture New Territory</h2>
+            <span class="section-tag">// Link Equity</span>
+            <h2 class="section-title">Broken Backlink Impact on thermionics.com</h2>
             <p class="section-subtitle">
-                While thermionics.com rebuilds, thermionicsnw.com can rank for underserved UHV keywords 
-                with no dominant player — a clear path to 800+ qualified visits/month within 18 months.
+                External websites linking to thermionics.com pages that no longer exist
             </p>
         </div>
 
-        <div class="opportunity-message">
-            <div class="opp-callout">
-                <span class="opp-icon">🎯</span>
-                <span>These are high-commercial-intent searches from engineers and procurement teams actively buying UHV equipment. The top competitor for most of these terms is a <strong>poorly-optimized legacy site</strong> — the exact gap thermionicsnw.com is positioned to fill.</span>
+        <div class="donut-container">
+            <div class="donut-chart">
+                <svg viewBox="0 0 160 160">
+                    <circle class="donut-bg"      cx="80" cy="80" r="70"/>
+                    <circle class="donut-working"  cx="80" cy="80" r="70"/>
+                    <circle class="donut-broken"   cx="80" cy="80" r="70" stroke-dashoffset="-308"/>
+                </svg>
+                <div class="donut-center">
+                    <div class="number" style="color: var(--accent-blue);">899</div>
+                    <div class="label">Total Backlinks</div>
+                </div>
             </div>
+        </div>
+
+        <div class="backlinks-visual">
+            <div class="backlinks-stat-box total">
+                <h3>~630</h3>
+                <p>Working Links (70%)</p>
+            </div>
+            <div class="backlinks-arrow">→</div>
+            <div class="backlinks-stat-box broken">
+                <h3>~270</h3>
+                <p>Broken Links (30%)</p>
+            </div>
+        </div>
+
+        <div class="backlinks-impact">
+            <h4>Impact of Broken Backlinks on thermionics.com</h4>
+            <ul>
+                <li>Search engines discover broken links and reduce trust signals</li>
+                <li>Referral traffic from other websites hits dead ends</li>
+                <li>Link equity accumulated over 50+ years is being wasted</li>
+                <li>Competitors benefit as thermionics.com's domain authority declines</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="animate-on-scroll">
+        <div class="section-header">
+            <span class="section-tag">// The Solution</span>
+            <h2 class="section-title">thermionics.com Recovery Strategy</h2>
+            <p class="section-subtitle">
+                A systematic approach to reclaim thermionics.com's search visibility
+            </p>
+        </div>
+
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-number">01</div>
+                <h3>Restore Lost Pages</h3>
+                <p>We've archived all 2,645 URLs from the Wayback Machine. We'll systematically rebuild product pages, specifications, and application guides — recapturing 50+ years of valuable content.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">02</div>
+                <h3>Fix Broken Backlinks</h3>
+                <p>Implement 301 redirects for all 899 backlinks pointing to thermionics.com, routing them to relevant live pages. This immediately recovers lost link equity and stops the authority bleeding.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">03</div>
+                <h3>Technical SEO Audit</h3>
+                <p>Comprehensive technical review of thermionics.com: site speed, mobile optimization, schema markup, XML sitemaps, and crawlability. Fix the foundation so new content can rank.</p>
+            </div>
+            <div class="solution-card">
+                <div class="solution-number">04</div>
+                <h3>Keyword Gap Analysis</h3>
+                <p>Identify exactly which keywords competitors rank for that thermionics.com doesn't. Target high-intent terms like "UHV systems," "e-beam evaporators," and "vacuum feedthroughs."</p>
+            </div>
+        </div>
+
+        <div class="opportunity-box">
+            <div class="opportunity-number">95×</div>
+            <div class="opportunity-label">Potential Traffic Increase for thermionics.com</div>
+            <div class="opportunity-sublabel">Based on competitor benchmarks and thermionics.com's historical content</div>
+        </div>
+    </section>
+
+    <div class="part-divider">
+        <div class="part-header launch">
+            <span class="part-number">Part 2</span>
+            <span class="part-title-text">New Site Launch</span>
+            <span class="part-domain">thermionicsnw.com</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem;">
+            Thermionics Northwest is a brand-new, separate entity — zero traffic history, zero rankings. That's not a weakness; it's a clean slate to capture underserved UHV keywords before competitors notice.
+        </p>
+    </div>
+
+    <section class="animate-on-scroll" id="nw-opportunity">
+        <div class="section-header">
+            <span class="section-tag">// The Opportunity for thermionicsnw.com</span>
+            <h2 class="section-title">thermionicsnw.com Can Capture New Territory</h2>
+            <p class="section-subtitle">
+                thermionicsnw.com starts from zero — but can rank for underserved UHV keywords
+                with no dominant player. A clear path to 800+ qualified visits/month within 18 months.
+            </p>
+        </div>
+
+        <div class="opp-callout">
+            <span class="opp-icon">🎯</span>
+            <span>These are high-commercial-intent searches from engineers and procurement teams actively buying UHV equipment. The top competitor for most of these terms is a <strong>poorly-optimized legacy site</strong> — the exact gap thermionicsnw.com is positioned to fill.</span>
         </div>
 
         <div class="section-header" style="margin-top:2.5rem; margin-bottom:1rem;">
@@ -1172,154 +1395,98 @@
         </div>
     </section>
 
-    <!-- Backlinks Section -->
-    <section class="backlinks-section animate-on-scroll">
-        <div class="section-header">
-            <span class="section-tag">// Link Equity</span>
-            <h2 class="section-title">Broken Backlink Impact</h2>
-            <p class="section-subtitle">
-                External websites linking to pages that no longer exist
-            </p>
+    <div class="part-divider">
+        <div class="part-header combined">
+            <span class="part-number">Part 3</span>
+            <span class="part-title-text">The Combined Strategy</span>
+            <span class="part-domain">thermionics.com + thermionicsnw.com</span>
         </div>
+        <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem;">
+            Handling both domains together creates compounding advantages that neither site could achieve independently.
+        </p>
+    </div>
 
-        <div class="donut-container">
-            <div class="donut-chart">
-                <svg viewBox="0 0 160 160">
-                    <circle class="donut-bg" cx="80" cy="80" r="70"/>
-                    <circle class="donut-working" cx="80" cy="80" r="70"/>
-                    <circle class="donut-broken" cx="80" cy="80" r="70" stroke-dashoffset="-308"/>
-                </svg>
-                <div class="donut-center">
-                    <div class="number" style="color: var(--accent-blue);">899</div>
-                    <div class="label">Total Backlinks</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="backlinks-visual">
-            <div class="backlinks-stat-box total">
-                <h3>~630</h3>
-                <p>Working Links (70%)</p>
-            </div>
-            <div class="backlinks-arrow">→</div>
-            <div class="backlinks-stat-box broken">
-                <h3>~270</h3>
-                <p>Broken Links (30%)</p>
-            </div>
-        </div>
-
-        <div class="backlinks-impact">
-            <h4>Impact of Broken Backlinks</h4>
-            <ul>
-                <li>Search engines discover broken links and reduce trust signals</li>
-                <li>Referral traffic from other websites hits dead ends</li>
-                <li>Link equity accumulated over 50+ years is being wasted</li>
-                <li>Competitors benefit as your domain authority declines</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
     <section class="animate-on-scroll">
         <div class="section-header">
-            <span class="section-tag">// The Strategy</span>
-            <h2 class="section-title">Build for Search from Day One</h2>
+            <span class="section-tag">// Why Both</span>
+            <h2 class="section-title">1 + 1 = 3</h2>
             <p class="section-subtitle">
-                A systematic approach to capture organic traffic for ThermionicsNW
+                A coordinated two-domain strategy unlocks synergies that separate campaigns simply can't replicate
             </p>
         </div>
 
-        <div class="solution-grid">
-            <div class="solution-card">
-                <div class="solution-number">01</div>
-                <h3>Product Catalog</h3>
-                <p>Build dedicated pages for each product category — feedthroughs, manipulators, ion pumps, leak detectors. Each page targets specific keywords with original content.</p>
+        <div class="combined-grid">
+            <div class="combined-card">
+                <div class="combined-icon">🔗</div>
+                <h3>Cross-Domain Internal Linking</h3>
+                <p>Strategic links between thermionics.com and thermionicsnw.com pass authority bidirectionally. thermionics.com's 50+ years of domain history accelerates thermionicsnw.com's rankings, while NW's fresh content supports the parent site's recovery.</p>
             </div>
-            <div class="solution-card">
-                <div class="solution-number">02</div>
-                <h3>Keyword-First Architecture</h3>
-                <p>150+ keywords mapped to specific pages. Primary keywords exclusive to one page; secondary keywords support across related content. No cannibalization.</p>
+            <div class="combined-card">
+                <div class="combined-icon">📣</div>
+                <h3>Consistent Brand Signals</h3>
+                <p>Unified NAP data, brand mentions, and co-citation patterns across both domains reinforce the Thermionics brand authority in Google's eyes. A coherent signal is stronger than two fragmented ones.</p>
             </div>
-            <div class="solution-card">
-                <div class="solution-number">03</div>
-                <h3>Technical Foundation</h3>
-                <p>Fast hosting, mobile-optimized design, schema markup for products, XML sitemap, and proper URL structure. Built right from the start — no retrofitting needed.</p>
+            <div class="combined-card">
+                <div class="combined-icon">✍️</div>
+                <h3>Unified Content Strategy</h3>
+                <p>One content calendar, one keyword universe, no cannibalization. We allocate topics deliberately — recovery content to thermionics.com, new-territory content to thermionicsnw.com — maximizing combined keyword coverage.</p>
             </div>
-            <div class="solution-card">
-                <div class="solution-number">04</div>
-                <h3>Quick Launch, Iterate Fast</h3>
-                <p>Phase 1 launches with high-priority pages (leak detectors, ion pumps, flanges). Add content weekly based on performance data. Start collecting traffic immediately.</p>
+            <div class="combined-card">
+                <div class="combined-icon">🏗️</div>
+                <h3>Shared Link Building Effort</h3>
+                <p>Outreach campaigns, industry citations, and PR mentions can reference both domains simultaneously. Link-building budget goes further when it serves two properties instead of one.</p>
             </div>
         </div>
 
-        <div class="opportunity-box">
-            <div class="opportunity-number">5,500+</div>
-            <div class="opportunity-label">Monthly Visits Potential</div>
-            <div class="opportunity-sublabel">Based on keyword research and realistic ranking assumptions</div>
+        <div class="combined-summary">
+            <h3>The Bottom Line</h3>
+            <p>thermionics.com recovers its lost authority and reclaims rankings it earned over 65+ years. thermionicsnw.com launches into a low-competition keyword landscape with a head start from its parent's domain signals. Together, the Thermionics brand achieves search dominance across the UHV equipment category — and SEO Bandwagon runs both campaigns as a unified strategy.</p>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Ready to Launch ThermionicsNW Right?</h2>
+            <h2>Ready to Execute the Strategy?</h2>
             <p>
-                Let's discuss how to build ThermionicsNW.com for organic search success 
-                from day one.
+                Let's discuss how we can help both thermionics.com and thermionicsnw.com 
+                claim their rightful positions in UHV search results.
             </p>
             <div class="cta-buttons">
                 <a href="https://calendar.app.google/homc9bi1hfMvHMEf6" class="cta-button primary" target="_blank">
                     Schedule a Strategy Call
                     <span>→</span>
                 </a>
-                <a href="mailto:kyle@seobandwagon.com?subject=Thermionics%20SEO%20Recovery" class="cta-button secondary">
+                <a href="mailto:kyle@seobandwagon.com?subject=Thermionics%20SEO%20Strategy" class="cta-button secondary">
                     Email Kyle
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>Prepared by <a href="https://seobandwagon.com">SEO Bandwagon</a> • March 2026</p>
+        <p>Prepared by <a href="https://seobandwagon.com">SEO Bandwagon</a> • February 2026</p>
     </footer>
 
     <script>
-        // Counter Animation
         function animateCounter(element, target, duration = 2000) {
             const start = 0;
             const startTime = performance.now();
-            
             function update(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                
-                // Easing function (ease-out)
                 const easeOut = 1 - Math.pow(1 - progress, 3);
                 const current = Math.floor(start + (target - start) * easeOut);
-                
                 element.textContent = current.toLocaleString();
-                
-                if (progress < 1) {
-                    requestAnimationFrame(update);
-                }
+                if (progress < 1) requestAnimationFrame(update);
             }
-            
             requestAnimationFrame(update);
         }
 
-        // Start counters when page loads
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                animateCounter(document.getElementById('counter-before'), 19360, 2500);
-            }, 500);
-            
-            setTimeout(() => {
-                animateCounter(document.getElementById('counter-after'), 8500, 2000);
-            }, 1500);
+            setTimeout(() => animateCounter(document.getElementById('counter-before'), 2645, 2500), 500);
+            setTimeout(() => animateCounter(document.getElementById('counter-after'), 1, 1500), 1500);
         });
 
-        // Chart bar animation
         function animateChartBars() {
             const bars = document.querySelectorAll('.chart-bar');
             bars.forEach((bar, index) => {
@@ -1330,7 +1497,6 @@
             });
         }
 
-        // Scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1340,8 +1506,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
-                    // Trigger chart animation when chart section becomes visible
                     if (entry.target.querySelector('.chart-container')) {
                         setTimeout(animateChartBars, 300);
                     }
@@ -1349,18 +1513,12 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scroll for navigation
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
