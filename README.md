@@ -1,1 +1,1 @@
-# ThermionicsNW SEO Analysis - In Progress
+# thermionicsnw.com — SEO Pitch (rebuilding with verified data)
