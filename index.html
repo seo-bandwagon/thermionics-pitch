@@ -1,410 +1,841 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThermionicsNW SEO Strategy | SEO Bandwagon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-tertiary: #1a1a25;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0b0;
-            --text-muted: #606070;
-            --accent-green: #22c55e;
-            --accent-blue: #3b82f6;
-            --accent-purple: #8b5cf6;
-            --accent-orange: #f97316;
-            --border-color: #2a2a3a;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-        header {
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
-        .logo span { color: var(--accent-blue); }
-        .cta-btn {
-            background: var(--accent-blue);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-        .hero { text-align: center; padding: 5rem 2rem; }
-        .hero-badge {
-            display: inline-block;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
-        .hero h1 .highlight { color: var(--accent-blue); }
-        .hero p { font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        .stat-box {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .stat-box .number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-green);
-        }
-        .stat-box .label { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem; }
-        section { padding: 4rem 0; }
-        .section-header { margin-bottom: 2rem; }
-        .section-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-blue);
-            margin-bottom: 0.5rem;
-        }
-        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .section-subtitle { color: var(--text-secondary); }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
-        th {
-            background: var(--bg-tertiary);
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        tr:hover { background: var(--bg-secondary); }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .green { color: var(--accent-green); }
-        .blue { color: var(--accent-blue); }
-        .orange { color: var(--accent-orange); }
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-        }
-        .card h3 { margin-bottom: 0.5rem; }
-        .card p { color: var(--text-secondary); font-size: 0.95rem; }
-        .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
-        .timeline-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .timeline-item.active { border-color: var(--accent-green); }
-        .timeline-phase { font-size: 0.8rem; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 1px; }
-        .timeline-traffic {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            margin: 0.5rem 0;
-        }
-        .timeline-label { font-size: 0.85rem; color: var(--text-secondary); }
-        .cta-section {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            margin: 3rem 0;
-        }
-        .cta-section h2 { font-size: 2rem; margin-bottom: 1rem; }
-        .cta-section p { color: var(--text-secondary); margin-bottom: 2rem; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .cta-buttons a { padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
-        .cta-buttons .primary { background: var(--accent-blue); color: white; }
-        .cta-buttons .secondary { background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-        footer a { color: var(--accent-blue); text-decoration: none; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .timeline { grid-template-columns: 1fr 1fr; }
-            .stat-box .number { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>thermionicsnw.com — SEO Launch Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #0f0f18;
+      --bg3: #14141f;
+      --border: #1e1e2e;
+      --red: #a50822;
+      --red-bright: #c40a28;
+      --red-dim: #6b0516;
+      --text: #e8e8f0;
+      --muted: #6b6b80;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+    }
+    .nav-brand {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--red-bright);
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── LAYOUT ── */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 0.75rem;
+    }
+
+    h1, h2, h3 { line-height: 1.2; }
+
+    /* ── HERO ── */
+    #hero {
+      padding-top: 8rem;
+      padding-bottom: 7rem;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      border: 1px solid var(--red-dim);
+      background: rgba(165,8,34,0.08);
+      padding: 0.3rem 0.9rem;
+      border-radius: 4px;
+      margin-bottom: 1.8rem;
+    }
+
+    #hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      color: #fff;
+    }
+
+    #hero h1 span { color: var(--red-bright); }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      font-weight: 400;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat-box {
+      background: var(--bg2);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--mono);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    /* ── COMPETITOR SECTION ── */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    .comp-table th {
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comp-table td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .comp-table tr:last-child td { border-bottom: none; }
+
+    .comp-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .comp-name {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .comp-domain {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: block;
+    }
+
+    .bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .bar-bg {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: var(--red);
+    }
+
+    .bar-num {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      color: var(--text);
+      white-space: nowrap;
+      min-width: 60px;
+      text-align: right;
+    }
+
+    .callout {
+      background: rgba(165,8,34,0.07);
+      border-left: 3px solid var(--red);
+      border-radius: 0 6px 6px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .callout strong { color: #fff; }
+
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .insight-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .insight-card h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .insight-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .insight-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ── KEYWORD TABLE ── */
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      max-width: 640px;
+    }
+
+    .kw-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .kw-table th {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .kw-table td {
+      padding: 0.7rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.82rem;
+    }
+
+    .kw-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    .kw-name { color: var(--text); font-family: 'Inter', sans-serif !important; font-weight: 500; }
+
+    .vol { color: #fff; font-weight: 700; }
+    .cpc { color: #7fbb8a; }
+    .comp-high { color: #e07070; }
+    .comp-med  { color: #e0b870; }
+    .comp-low  { color: #7fbb8a; }
+
+    .kw-note {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      margin-top: 1.5rem;
+      font-size: 0.83rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      line-height: 1.6;
+    }
+
+    /* ── PLAN ── */
+    .page-breakdown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    .pb-item {
+      background: var(--bg2);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .pb-num {
+      font-family: var(--mono);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--red-bright);
+      display: block;
+    }
+
+    .pb-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 0.25rem;
+      font-weight: 500;
+    }
+
+    .plan-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .plan-step {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--red-bright);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-step h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-step p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── PROJECTIONS ── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .proj-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--red);
+    }
+
+    .proj-time {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .proj-visits {
+      font-family: var(--mono);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .proj-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .proj-note {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 1.5rem;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      text-align: center;
+      padding: 7rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    #cta h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    #cta p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--red-bright);
+      transform: translateY(-1px);
+    }
+
+    .footer-brand {
+      margin-top: 3rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      nav .nav-links { display: none; }
+      .comp-table { font-size: 0.8rem; }
+      .kw-table { font-size: 0.75rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">[<span>SEO</span>]Bandwagon</div>
-        <a href="https://calendar.app.google/homc9bi1hfMvHMEf6" class="cta-btn">Schedule Call →</a>
-    </header>
-    <div class="container">
-        <section class="hero">
-            <div class="hero-badge">SEO Strategy Proposal</div>
-            <h1><span class="highlight">ThermionicsNW</span> Market Opportunity</h1>
-            <p>70 products. 11,530 monthly searches. A clear path to organic growth in the UHV equipment market.</p>
-        </section>
-        <div class="stats-row">
-            <div class="stat-box">
-                <div class="number">70</div>
-                <div class="label">Products in Catalog</div>
-            </div>
-            <div class="stat-box">
-                <div class="number">11,530</div>
-                <div class="label">Monthly Searches</div>
-            </div>
-            <div class="stat-box">
-                <div class="number">450-650</div>
-                <div class="label">Target Visits/Mo (18mo)</div>
-            </div>
-            <div class="stat-box">
-                <div class="number">$2,679</div>
-                <div class="label">Est. Monthly Lead Value</div>
-            </div>
-        </div>
-        <section>
-            <div class="section-header">
-                <div class="section-tag">// Competitor Analysis</div>
-                <h2 class="section-title">The Competitive Landscape</h2>
-                <p class="section-subtitle">Real traffic data from DataForSEO — March 2026</p>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Competitor</th>
-                        <th>Keywords</th>
-                        <th>Top 10</th>
-                        <th>Est. Traffic/mo</th>
-                        <th>Traffic Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>lesker.com</strong></td>
-                        <td class="mono">4,334</td>
-                        <td class="mono">1,417</td>
-                        <td class="mono green">22,910</td>
-                        <td class="mono">$52,936/mo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>idealvac.com</strong></td>
-                        <td class="mono">5,654</td>
-                        <td class="mono">1,522</td>
-                        <td class="mono green">13,120</td>
-                        <td class="mono">$45,432/mo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>thermionics.com</strong></td>
-                        <td class="mono">164</td>
-                        <td class="mono">20</td>
-                        <td class="mono orange">190</td>
-                        <td class="mono">$212/mo</td>
-                    </tr>
-                    <tr style="background: rgba(34, 197, 94, 0.1);">
-                        <td><strong>thermionicsnw.com</strong> (target)</td>
-                        <td class="mono">—</td>
-                        <td class="mono">—</td>
-                        <td class="mono blue">450-650</td>
-                        <td class="mono">$2,679/mo</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p style="color: var(--text-secondary); margin-top: 1rem;">
-                <strong>Key insight:</strong> thermionics.com is a small player (190 visits/mo). ThermionicsNW can surpass them within 6 months and capture meaningful market share from Lesker and IdealVac.
-            </p>
-        </section>
-        <section>
-            <div class="section-header">
-                <div class="section-tag">// Keyword Opportunities</div>
-                <h2 class="section-title">Top Product Pages by Search Volume</h2>
-                <p class="section-subtitle">Priority pages with highest traffic potential</p>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Page</th>
-                        <th>Primary Keyword</th>
-                        <th>Volume</th>
-                        <th>CPC</th>
-                        <th>Est. Traffic</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>/products/leak-detectors/</td>
-                        <td>helium leak detector</td>
-                        <td class="mono">4,920</td>
-                        <td class="mono green">$5.49</td>
-                        <td class="mono">100-150/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/accessories/fittings/</td>
-                        <td>cf flange, foreline trap</td>
-                        <td class="mono">1,900</td>
-                        <td class="mono green">$1.85-$8.30</td>
-                        <td class="mono">57-95/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/ion-pumps/</td>
-                        <td>ion pump</td>
-                        <td class="mono">1,060</td>
-                        <td class="mono green">$4.85</td>
-                        <td class="mono">42-64/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/feedthroughs/</td>
-                        <td>vacuum feedthrough</td>
-                        <td class="mono">940</td>
-                        <td class="mono green">$13.51</td>
-                        <td class="mono">28-47/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/sample-handling/</td>
-                        <td>vacuum suitcase</td>
-                        <td class="mono">760</td>
-                        <td class="mono green">$1.36</td>
-                        <td class="mono">23-38/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/feedthroughs/rotary/</td>
-                        <td>rotary feedthrough, frmc</td>
-                        <td class="mono">560</td>
-                        <td class="mono green">$5.88-$9.27</td>
-                        <td class="mono">22-34/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/accessories/</td>
-                        <td>tilt stage</td>
-                        <td class="mono">320</td>
-                        <td class="mono green">$4.86</td>
-                        <td class="mono">13-19/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/manipulators/xyz/</td>
-                        <td>vacuum manipulator</td>
-                        <td class="mono">200</td>
-                        <td class="mono green">$1.62</td>
-                        <td class="mono">8-12/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/tsp/</td>
-                        <td>titanium sublimation pump</td>
-                        <td class="mono">190</td>
-                        <td class="mono">—</td>
-                        <td class="mono">10-15/mo</td>
-                    </tr>
-                    <tr>
-                        <td>/products/wobble-sticks/</td>
-                        <td>wobble stick</td>
-                        <td class="mono">180</td>
-                        <td class="mono green">$2.63</td>
-                        <td class="mono">9-13/mo</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p style="color: var(--text-secondary); margin-top: 1rem;">
-                Full keyword map includes <strong>70 products</strong> across 15 categories with primary and secondary keyword assignments.
-            </p>
-        </section>
-        <section>
-            <div class="section-header">
-                <div class="section-tag">// Traffic Projection</div>
-                <h2 class="section-title">18-Month Growth Timeline</h2>
-                <p class="section-subtitle">Conservative estimates based on keyword difficulty and competition</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-phase">Month 1-3</div>
-                    <div class="timeline-traffic">80-120</div>
-                    <div class="timeline-label">visits/mo</div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">10 core pages live</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-phase">Month 4-6</div>
-                    <div class="timeline-traffic">150-220</div>
-                    <div class="timeline-label">visits/mo</div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">25 pages, surpass thermionics.com</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-phase">Month 7-12</div>
-                    <div class="timeline-traffic">280-400</div>
-                    <div class="timeline-label">visits/mo</div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">50 pages, building authority</p>
-                </div>
-                <div class="timeline-item active">
-                    <div class="timeline-phase">Month 13-18</div>
-                    <div class="timeline-traffic">450-650</div>
-                    <div class="timeline-label">visits/mo</div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">70 pages, full catalog</p>
-                </div>
-            </div>
-            <p style="color: var(--text-secondary); text-align: center; margin-top: 1rem;">
-                At 3-5% B2B conversion rate → <strong class="green">14-33 quote requests per month</strong> at steady state
-            </p>
-        </section>
-        <section>
-            <div class="section-header">
-                <div class="section-tag">// Strategy</div>
-                <h2 class="section-title">How We'll Get There</h2>
-            </div>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>🎯 Keyword-First Architecture</h3>
-                    <p>Every product page targets specific keywords. Primary keywords exclusive to one page, secondary keywords support across categories. No cannibalization.</p>
-                </div>
-                <div class="card">
-                    <h3>⚡ Technical Foundation</h3>
-                    <p>Fast hosting, mobile-optimized design, schema markup for products, XML sitemap, proper URL structure. Built right from day one.</p>
-                </div>
-                <div class="card">
-                    <h3>📈 Priority Launch</h3>
-                    <p>Start with highest-volume pages: leak detectors (4,920/mo), ion pumps (1,060/mo), flanges (1,900/mo). Quick wins build momentum.</p>
-                </div>
-                <div class="card">
-                    <h3>🔄 Iterate on Data</h3>
-                    <p>Monthly ranking reports, traffic analysis, and content optimization. Double down on what works, adjust what doesn't.</p>
-                </div>
-            </div>
-        </section>
-        <div class="cta-section">
-            <h2>Ready to Build ThermionicsNW's Organic Presence?</h2>
-            <p>Let's discuss the strategy and timeline for your product catalog.</p>
-            <div class="cta-buttons">
-                <a href="https://calendar.app.google/homc9bi1hfMvHMEf6" class="primary">Schedule Strategy Call →</a>
-                <a href="mailto:kyle@seobandwagon.com?subject=ThermionicsNW%20SEO" class="secondary">Email Kyle</a>
-            </div>
-        </div>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">SEO Bandwagon</span>
+  <ul class="nav-links">
+    <li><a href="#opportunity">Market</a></li>
+    <li><a href="#keywords">Keywords</a></li>
+    <li><a href="#plan">The Plan</a></li>
+    <li><a href="#projections">Projections</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-badge">New Domain · March 2026</div>
+  <h1><span>thermionicsnw.com</span> — SEO Launch Strategy</h1>
+  <p class="hero-sub">A brand-new domain entering a market where the established players have ignored SEO for decades.</p>
+
+  <div class="stat-grid">
+    <div class="stat-box">
+      <span class="stat-num">102</span>
+      <span class="stat-label">Products in Catalog</span>
     </div>
-    <footer>
-        <p>Prepared by <a href="https://seobandwagon.com">SEO Bandwagon</a> • March 2026</p>
-    </footer>
+    <div class="stat-box">
+      <span class="stat-num">142</span>
+      <span class="stat-label">Pages Planned</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">5,400+</span>
+      <span class="stat-label">Monthly Searches — Leak Detection</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">721–2,092</span>
+      <span class="stat-label">Projected Visits/mo at 18 Months</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- MARKET OPPORTUNITY -->
+<section id="opportunity">
+  <div class="section-tag">Competitive Landscape</div>
+  <h2>Your Competitors Have Abandoned Search</h2>
+  <p class="section-sub">We analyzed every major UHV equipment competitor. The hardware leaders are not the search leaders.</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Keywords Ranking</th>
+        <th>Est. Monthly Traffic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="comp-name">MTI Corporation</span>
+          <span class="comp-domain">mtixtl.com</span>
+        </td>
+        <td>4,036</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            <span class="bar-num">27,433</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="comp-name">Kurt J. Lesker</span>
+          <span class="comp-domain">lesker.com</span>
+        </td>
+        <td>4,334</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:83%"></div></div>
+            <span class="bar-num">22,911</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="comp-name">Pfeiffer Vacuum</span>
+          <span class="comp-domain">pfeiffer-vacuum.com</span>
+        </td>
+        <td>8,218</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:59%"></div></div>
+            <span class="bar-num">16,204</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="comp-name">Kimball Physics</span>
+          <span class="comp-domain">kimballphysics.com</span>
+        </td>
+        <td>656</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:14%"></div></div>
+            <span class="bar-num">3,870</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="comp-name">Riber</span>
+          <span class="comp-domain">riber.com</span>
+        </td>
+        <td>645</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:4%"></div></div>
+            <span class="bar-num">1,079</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="comp-name">Thermionics (direct competitor)</span>
+          <span class="comp-domain">thermionics.com</span>
+        </td>
+        <td>166</td>
+        <td>
+          <div class="bar-wrap">
+            <div class="bar-bg"><div class="bar-fill" style="width:1%" style="background:#a50822"></div></div>
+            <span class="bar-num">191</span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>thermionics.com — your most direct competitor — has 1,070 pages indexed but only ranks for 166 keywords and gets ~191 visits/month.</strong> Their top 4 ranking positions are all branded searches — people who already know the company name. Their SEO execution is essentially zero despite having the content. A properly-built thermionicsnw.com can surpass them organically within 12 months.
+  </div>
+
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-icon">🕰️</div>
+      <h4>Decades of neglect</h4>
+      <p>UHV equipment companies built their reputations offline. Search has never been a priority — and it shows. Nobody owns this space.</p>
+    </div>
+    <div class="insight-card">
+      <div class="insight-icon">🎯</div>
+      <h4>High-intent buyers</h4>
+      <p>Engineers searching for helium leak detectors or rotary feedthroughs are ready to buy. High CPC ($5–$16+) confirms this is commercial-grade traffic.</p>
+    </div>
+    <div class="insight-card">
+      <div class="insight-icon">⚡</div>
+      <h4>Clean slate advantage</h4>
+      <p>Starting fresh means no technical debt, no legacy architecture, no redirects to manage. We build it right from day one.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- KEYWORDS -->
+<section id="keywords">
+  <div class="section-tag">Keyword Research — DataForSEO · US · Jan 2026</div>
+  <h2>Real Demand. Verified Data.</h2>
+  <p class="section-sub">292 keywords researched. 67 with measurable volume. Every one mapped to a specific page.</p>
+
+  <div class="callout">
+    The helium leak detector cluster alone — <strong>vacuum leak detector + helium leak detector + related terms</strong> — accounts for <strong>5,400+ monthly searches</strong>. That's the single biggest traffic opportunity in the entire catalog.
+  </div>
+
+  <table class="kw-table">
+    <thead>
+      <tr>
+        <th>Keyword</th>
+        <th>Vol/mo</th>
+        <th>CPC</th>
+        <th>Competition</th>
+        <th>Target Page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="kw-name">vacuum leak detector</td><td class="vol">1,900</td><td class="cpc">$0.85</td><td class="comp-med">MEDIUM</td><td>Leak Detectors hub</td></tr>
+      <tr><td class="kw-name">vacuum leak testing</td><td class="vol">1,900</td><td class="cpc">$0.84</td><td class="comp-med">MEDIUM</td><td>Leak Detectors hub</td></tr>
+      <tr><td class="kw-name">helium leak detector</td><td class="vol">1,300</td><td class="cpc">$5.49</td><td class="comp-high">HIGH</td><td>Helium Leak Detectors</td></tr>
+      <tr><td class="kw-name">helium leak detection</td><td class="vol">1,300</td><td class="cpc">$5.49</td><td class="comp-high">HIGH</td><td>Helium Leak Detectors</td></tr>
+      <tr><td class="kw-name">vacuum feedthrough</td><td class="vol">210</td><td class="cpc">$13.51</td><td class="comp-low">LOW</td><td>Feedthroughs hub</td></tr>
+      <tr><td class="kw-name">leak testing equipment</td><td class="vol">170</td><td class="cpc">$5.31</td><td class="comp-med">MEDIUM</td><td>Leak Detectors hub</td></tr>
+      <tr><td class="kw-name">helium mass spectrometer</td><td class="vol">140</td><td class="cpc">$5.59</td><td class="comp-med">MEDIUM</td><td>Helium Leak Detectors</td></tr>
+      <tr><td class="kw-name">titanium sublimation pump</td><td class="vol">110</td><td class="cpc">—</td><td class="comp-low">LOW</td><td>Ion &amp; TSP Pumps</td></tr>
+      <tr><td class="kw-name">mass spectrometer leak detector</td><td class="vol">110</td><td class="cpc">$7.67</td><td class="comp-med">MEDIUM</td><td>Helium Leak Detectors</td></tr>
+      <tr><td class="kw-name">rotary feedthrough vacuum</td><td class="vol">70</td><td class="cpc">$9.75</td><td class="comp-low">LOW</td><td>Rotary Feedthroughs</td></tr>
+      <tr><td class="kw-name">ion pump vacuum</td><td class="vol">50</td><td class="cpc">$4.06</td><td class="comp-low">LOW</td><td>Ion &amp; TSP Pumps</td></tr>
+      <tr><td class="kw-name">electrical feedthrough vacuum</td><td class="vol">50</td><td class="cpc">$16.33</td><td class="comp-low">LOW</td><td>Electrical Feedthroughs</td></tr>
+      <tr><td class="kw-name">vacuum electrical feedthrough</td><td class="vol">50</td><td class="cpc">$16.33</td><td class="comp-low">LOW</td><td>Electrical Feedthroughs</td></tr>
+      <tr><td class="kw-name">uhv viewport</td><td class="vol">20</td><td class="cpc">$4.66</td><td class="comp-med">MEDIUM</td><td>Viewports</td></tr>
+      <tr><td class="kw-name">linear feedthrough</td><td class="vol">10</td><td class="cpc">$2.76</td><td class="comp-low">LOW</td><td>Linear Feedthroughs</td></tr>
+      <tr><td class="kw-name">uhv manipulator</td><td class="vol">10</td><td class="cpc">—</td><td class="comp-low">LOW</td><td>Manipulators</td></tr>
+    </tbody>
+  </table>
+
+  <div class="kw-note">
+    💡 Model-specific searches (FLML, RNN, TLT, etc.) show zero Google Ads volume — meaning zero paid competition. Engineers who search part numbers are high-intent buyers. A new domain ranks for these within weeks of launch.
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- THE PLAN -->
+<section id="plan">
+  <div class="section-tag">Content Architecture</div>
+  <h2>142 Pages. Every One Intentional.</h2>
+  <p class="section-sub">Not a site build — a keyword-mapped content system. Each page targets a specific query, category, or product.</p>
+
+  <div class="page-breakdown">
+    <div class="pb-item">
+      <span class="pb-num">4</span>
+      <div class="pb-label">Core Pages</div>
+    </div>
+    <div class="pb-item">
+      <span class="pb-num">9</span>
+      <div class="pb-label">Category Hubs</div>
+    </div>
+    <div class="pb-item">
+      <span class="pb-num">28</span>
+      <div class="pb-label">Subcategory Pages</div>
+    </div>
+    <div class="pb-item">
+      <span class="pb-num">8</span>
+      <div class="pb-label">Application Pages</div>
+    </div>
+    <div class="pb-item">
+      <span class="pb-num">102</span>
+      <div class="pb-label">Product Pages</div>
+    </div>
+  </div>
+
+  <div class="plan-steps">
+    <div class="plan-step">
+      <div class="step-num">Step 01</div>
+      <h4>Technical Foundation</h4>
+      <p>Clean URL structure, fast load times, proper schema markup, sitemap, robots.txt. New domain — no legacy baggage. We get this right from day one.</p>
+    </div>
+    <div class="plan-step">
+      <div class="step-num">Step 02</div>
+      <h4>Keyword Architecture</h4>
+      <p>Every page mapped to a primary keyword. Hub pages capture category traffic. Product pages capture model-specific and long-tail queries. No keyword cannibalization.</p>
+    </div>
+    <div class="plan-step">
+      <div class="step-num">Step 03</div>
+      <h4>Original Content</h4>
+      <p>Unique descriptions, specs, and application context on every product page. Category hubs with editorial depth. Content competitors don't have — and won't write.</p>
+    </div>
+    <div class="plan-step">
+      <div class="step-num">Step 04</div>
+      <h4>Measure &amp; Scale</h4>
+      <p>Monthly ranking reports. Traffic attribution by page cluster. Identify what's winning, double down. Identify gaps, fill them. SEO as a compounding asset.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider" />
+
+<!-- PROJECTIONS -->
+<section id="projections">
+  <div class="section-tag">Conservative Projections</div>
+  <h2>The Ramp</h2>
+  <p class="section-sub">New domains don't rank overnight. These projections reflect real domain aging curves and sustained execution — not best-case scenarios.</p>
+
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-time">6 Months</div>
+      <span class="proj-visits">100–150</span>
+      <div class="proj-label">visits / month</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-time">12 Months</div>
+      <span class="proj-visits">350–500</span>
+      <div class="proj-label">visits / month</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-time">18 Months</div>
+      <span class="proj-visits">721–2,092</span>
+      <div class="proj-label">visits / month</div>
+    </div>
+  </div>
+
+  <div class="proj-note">
+    These projections assume consistent execution — content publishing, technical hygiene, and no major algorithm disruptions. The 18-month upper range reflects strong performance in the leak detection cluster. The helium leak detection cluster alone could drive <strong>200+ visits/month</strong> at steady state if that page reaches page one.
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-tag">SEO Bandwagon</div>
+  <h2>Ready to build thermionicsnw.com the right way?</h2>
+  <p>142 pages. Real keyword data. A competitor that's left the door wide open.</p>
+  <a class="btn" href="mailto:kyle@seobandwagon.com?subject=ThermionicsNW SEO Strategy">Start the Conversation</a>
+  <div class="footer-brand">SEO Bandwagon · seobandwagon.com · © 2026</div>
+</section>
+
 </body>
 </html>
